@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f5a1a1;
+    background: #000;
 }
 
 .navigation{
@@ -87,10 +87,10 @@ body{
     height: 60px;
     background: greenyellow;
     border-radius: 50%;
-    border:  6px solid #f5a1a1;
+    border:  6px solid #000;
     transition: 0.5s;
 }
-.indicator::before{
+/* .indicator::before{
     content: "";
     position: absolute;
     top: 49%;
@@ -99,7 +99,18 @@ body{
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 #f5a1a1;
+    box-shadow: 1px -10px 0 0 #000;
+} */
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: -20px;
+    width: 17px;
+    height: 22px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #000;
 }
 
 .indicator::after{
@@ -111,7 +122,7 @@ body{
     height: 25px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #f5a1a1;
+    box-shadow: -1px -10px 0 0 #000;
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator{
@@ -132,3 +143,66 @@ body{
 .navigation ul li:nth-child(5).active ~ .indicator{
     transform: translateX(calc(70px * 4));
 }
+
+/* xam */
+
+/* .react-native-container {
+    position: relative;
+    padding-left: 50px;
+}
+
+.react-native-container .react-native-logo {
+    width: 80px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.react-native-container:hover,
+.react-native-logo:hover {
+    transform: rotate(360deg);
+    color:#61DAFB;
+}
+
+.react_content{
+    padding-left: 15px;
+    color: white;
+    display: inline-block;
+    font-size: 84px;
+}
+.react_content:hover{
+    color:#61DAFB;
+} */
+
+
+
+
+.react-native-container {
+    position: relative;
+    padding-left: 50px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.react-native-container:hover .react-native-logo{
+    transform: rotate(360deg);
+    color: #61DAFB;
+}
+
+.react-native-container .react-native-logo {
+    width: 80px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.react_content {
+    padding-left: 15px;
+    color: white;
+    font-size: 24px;
+    transition: transform 0.4s ease, color 0.2s ease;
+}
+
+.react_content:hover {
+    color: #61DAFB;
+}
+
